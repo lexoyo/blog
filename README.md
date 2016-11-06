@@ -30,7 +30,6 @@ $ npm run stop
 ```
 
 Publish your changes to github pages with
-
 ```
 $ git add -A
 $ git commit -am "your commit message"
