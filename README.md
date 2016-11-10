@@ -35,3 +35,19 @@ $ git add -A
 $ git commit -am "your commit message"
 $ git push origin gh-pages
 ```
+
+____
+
+in case of 'lxml.etree.XMLSyntaxError: Char 0x0 out of allowed range, line 1, column 1031'
+
+sqlite3 Ghost/content/data/ghost-dev.db
+
+.mode csv
+.once dataout.csv
+SELECT * FROM posts;
+
+vi dataout.csv
+:s/\\u0000//g
+
+delete from posts;
+.import dataout.csv posts
